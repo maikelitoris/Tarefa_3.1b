@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Especialistas · Animalec Admin</title>
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<header class="topo">
+  <a class="marca" href="admin.html"><span class="logo" aria-hidden="true">🐾</span> Animalec <small>Administração</small></a>
+  <nav aria-label="Menu principal">
+    <details class="menu-mobile"><summary>Menu</summary><ul><li><a href="admin.html">Painel</a></li><li><a href="animais.html">Animais</a></li><li><a href="utilizadores.html">Utilizadores</a></li><li><a href="quizzes.html">Quizzes</a></li><li><a href="questoes.html">Questões</a></li><li><a href="sponsors.html">Patrocinadores</a></li><li><a href="experts.html" aria-current="page">Especialistas</a></li></ul></details>
+    <ul class="menu-desktop"><li><a href="admin.html">Painel</a></li><li><a href="animais.html">Animais</a></li><li><a href="utilizadores.html">Utilizadores</a></li><li><a href="quizzes.html">Quizzes</a></li><li><a href="questoes.html">Questões</a></li><li><a href="sponsors.html">Patrocinadores</a></li><li><a href="experts.html" aria-current="page">Especialistas</a></li></ul>
+  </nav>
+  <a class="sair" href="index.html">Sair</a>
+</header>
+<main id="conteudo">
+<div class="cabecalho-pagina"><h1>Especialistas</h1><div class="botoes-topo"><a class="btn primario" href="expert-form.html">Adicionar especialista</a> <a class="btn" href="admin.html">Menu principal</a></div></div>
+<p class="intro">Especialistas científicos que validam os conteúdos e os quizzes de cada espécie ou família.</p>
+<form class="filtros" role="search" action="experts.html">
+  <label for="q">Pesquisar</label><input id="q" name="q" type="search" placeholder="Nome ou instituição">
+  <label for="fam">Família</label><select id="fam" name="fam"><option value="">Todas</option><option>Felidae</option><option>Canidae</option><option>Ciconiidae</option></select>
+  <button class="btn">Filtrar</button>
+</form>
+<table class="tabela"><caption>3 especialistas registados</caption>
+<thead><tr><th scope="col">Nome</th><th scope="col">Especialidade</th><th scope="col">Instituição</th><th scope="col">Animais</th><th scope="col">Email</th><th scope="col">Ações</th></tr></thead>
+<tbody><tr><td data-label="Nome"><a href="expert-detalhe.html">Dra. Marta Lopes</a></td><td data-label="Especialidade">Felinos (Felidae)</td><td data-label="Instituição">Instituto de Biologia A (exemplo)</td><td data-label="Animais">Lince-ibérico</td><td data-label="Email"><a href="mailto:marta.lopes@biologia-a.example">marta.lopes@biologia-a.example</a></td><td data-label="Ações" class="acoes"><a href="expert-form.html" class="btn pequeno">Editar</a> <a href="expert-detalhe.html" class="btn pequeno">Ver</a> <button type="button" class="btn pequeno perigo" onclick="return confirm('Remover este registo? (protótipo: nada é apagado)')">Remover</button></td></tr><tr><td data-label="Nome"><a href="expert-detalhe.html">Prof. Rui Costa</a></td><td data-label="Especialidade">Canídeos (Canidae)</td><td data-label="Instituição">Instituto de Biologia B (exemplo)</td><td data-label="Animais">Lobo-ibérico</td><td data-label="Email"><a href="mailto:rui.costa@biologia-b.example">rui.costa@biologia-b.example</a></td><td data-label="Ações" class="acoes"><a href="expert-form.html" class="btn pequeno">Editar</a> <a href="expert-detalhe.html" class="btn pequeno">Ver</a> <button type="button" class="btn pequeno perigo" onclick="return confirm('Remover este registo? (protótipo: nada é apagado)')">Remover</button></td></tr><tr><td data-label="Nome"><a href="expert-detalhe.html">Dra. Ana Neves</a></td><td data-label="Especialidade">Aves (Ciconiidae, Accipitridae)</td><td data-label="Instituição">Centro de Investigação C (exemplo)</td><td data-label="Animais">Cegonha-branca, Águia-de-bonelli</td><td data-label="Email"><a href="mailto:ana.neves@centro-c.example">ana.neves@centro-c.example</a></td><td data-label="Ações" class="acoes"><a href="expert-form.html" class="btn pequeno">Editar</a> <a href="expert-detalhe.html" class="btn pequeno">Ver</a> <button type="button" class="btn pequeno perigo" onclick="return confirm('Remover este registo? (protótipo: nada é apagado)')">Remover</button></td></tr></tbody></table>
+</main>
+<footer class="rodape"><p>Animalec · Página de Administração · protótipo HTML5 (Tarefa 3.1 b), PWA 2026/27)</p></footer>
+</body>
+</html>

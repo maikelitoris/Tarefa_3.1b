@@ -1,0 +1,73 @@
+/* Animalec · Página de Administração · protótipo (Tarefa 3.1 b) */
+:root{--verde:#2e7d32;--verde-esc:#1b5e20;--verde-cl:#e8f5e9;--areia:#faf7f0;--texto:#1f2a1f;--cinza:#5f6b5f;--borda:#d9ded6;--ouro:#c9a227;--prata:#9aa3ad;--bronze:#b0703c;--raio:10px}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--texto);background:var(--areia);line-height:1.5}
+a{color:var(--verde-esc)}
+.topo{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;padding:.6rem 1.2rem;background:var(--verde);color:#fff}
+.topo a{color:#fff;text-decoration:none}
+.marca{font-weight:700;font-size:1.2rem;display:flex;align-items:center;gap:.4rem}
+.marca small{font-weight:400;opacity:.85;font-size:.85rem}
+.topo nav{flex:1}
+.menu-desktop{display:flex;gap:.2rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.menu-desktop a,.menu-mobile a{display:block;padding:.4rem .7rem;border-radius:6px}
+.menu-desktop a:hover,[aria-current=page]{background:rgba(255,255,255,.18)}
+.menu-mobile{display:none}
+.sair{border:1px solid rgba(255,255,255,.6);padding:.3rem .8rem;border-radius:6px}
+main{max-width:1100px;margin:1.5rem auto;padding:0 1.2rem}
+h1{margin:.2rem 0 .4rem;font-size:1.7rem}
+.intro{color:var(--cinza);margin-top:0}
+.cartao{background:#fff;border:1px solid var(--borda);border-radius:var(--raio);padding:1.1rem 1.3rem;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.grelha{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.entidade h2{margin:0;font-size:1.1rem}.entidade h2 a{text-decoration:none}
+.numero{font-size:2.2rem;font-weight:700;margin:.3rem 0 0;color:var(--verde)}
+.entidade.nova{border:2px solid var(--verde)}
+.etiqueta{display:inline-block;margin:.3rem 0 0;background:var(--verde-cl);color:var(--verde-esc);border-radius:99px;padding:.05rem .6rem;font-size:.8rem;font-weight:600}
+.cabecalho-pagina{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.5rem 1rem;border-radius:8px;border:1px solid var(--borda);background:#fff;color:var(--texto);text-decoration:none;font:inherit;cursor:pointer}
+.btn.primario{background:var(--verde);border-color:var(--verde);color:#fff}
+.btn.pequeno{padding:.2rem .6rem;font-size:.85rem}
+.filtros{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:1rem 0;background:#fff;border:1px solid var(--borda);border-radius:var(--raio);padding:.7rem}
+.filtros label{font-size:.85rem;color:var(--cinza)}
+input,select,textarea{font:inherit;padding:.45rem .6rem;border:1px solid var(--borda);border-radius:6px;background:#fff;width:100%}
+.filtros input,.filtros select{width:auto}
+input:user-invalid,select:user-invalid{border-color:#c62828}
+.tabela{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--borda);border-radius:var(--raio);overflow:hidden}
+.tabela caption{text-align:left;padding:.5rem 0;color:var(--cinza);font-size:.9rem}
+.tabela th,.tabela td{text-align:left;padding:.6rem .8rem;border-bottom:1px solid var(--borda);vertical-align:middle}
+.tabela thead th{background:var(--verde-cl);font-size:.85rem;text-transform:uppercase;letter-spacing:.03em}
+.nivel,.estado{display:inline-block;padding:.05rem .55rem;border-radius:99px;font-size:.8rem;font-weight:600;color:#fff}
+.nivel.ouro{background:var(--ouro)}.nivel.prata{background:var(--prata)}.nivel.bronze{background:var(--bronze)}
+.estado.ativo{background:var(--verde)}.estado.inativo{background:#9e9e9e}
+.formulario{max-width:720px}
+fieldset{border:1px solid var(--borda);border-radius:8px;margin:0 0 1rem;padding:.8rem 1rem}
+legend{font-weight:700;color:var(--verde-esc);padding:0 .3rem}
+.formulario label{display:block;margin:.6rem 0 .2rem;font-weight:600;font-size:.92rem}
+.formulario label.caixa{font-weight:400;display:flex;gap:.5rem;align-items:center}
+.formulario label.caixa input{width:auto}
+.botoes{display:flex;gap:.6rem;justify-content:flex-end;margin-top:1rem}
+.detalhe header h1{margin-bottom:.2rem}
+.detalhe dl{display:grid;grid-template-columns:max-content 1fr;gap:.4rem 1.2rem}
+.detalhe dt{font-weight:600;color:var(--cinza)}.detalhe dd{margin:0}
+.mensagem{background:var(--verde-cl);border-radius:8px;padding:.6rem 1rem;margin-top:1rem}.mensagem h2{font-size:1rem;margin:.2rem 0}
+.migalhas{font-size:.9rem;margin-bottom:.6rem;color:var(--cinza)}
+.rodape{text-align:center;color:var(--cinza);font-size:.85rem;padding:2rem 1rem}
+.pagina-login{display:grid;place-items:center;min-height:100vh;background:linear-gradient(160deg,var(--verde-cl),var(--areia))}
+.login{max-width:380px;width:100%}.login h1{font-size:1.3rem}.login label{display:block;margin:.7rem 0 .2rem;font-weight:600}.login .btn{width:100%;margin-top:1rem}
+.nota{font-size:.8rem;color:var(--cinza)}
+/* Mobile */
+@media (max-width:760px){
+  .menu-desktop{display:none}
+  .menu-mobile{display:block}
+  .menu-mobile summary{cursor:pointer;list-style:none;padding:.3rem .7rem;border:1px solid rgba(255,255,255,.6);border-radius:6px;width:max-content;margin-left:auto}
+  .menu-mobile ul{list-style:none;margin:.5rem 0 0;padding:0}
+  .topo{gap:.5rem}
+  .sair{display:none}
+  .tabela thead{display:none}
+  .tabela,.tabela tbody,.tabela tr,.tabela td{display:block;width:100%}
+  .tabela tr{border-bottom:2px solid var(--borda);padding:.4rem 0}
+  .tabela td{border:0;padding:.25rem .8rem;display:flex;gap:.6rem}
+  .tabela td::before{content:attr(data-label);font-weight:600;min-width:7.5rem;color:var(--cinza)}
+  .detalhe dl{grid-template-columns:1fr}
+  h1{font-size:1.4rem}
+}
+.btn.perigo{color:#b71c1c;border-color:#e0b4b4}.botoes-topo{display:flex;gap:.5rem;flex-wrap:wrap}
